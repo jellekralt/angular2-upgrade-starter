@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font: 300 14px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body { background: #eee; margin: 0; padding: 0; }
+h3 {
+    text-align: center;
+    margin: 0 auto;
+}
+.todo {
+    background: #fff;
+    border-radius: 3px;
+    margin: 15px auto;
+    padding: 15px;
+    max-width: 350px;
+    border: 1px solid #ccc;
+}
+.todo__fields {
+    overflow: hidden;
+    margin: 10px 0 0;
+}
+.todo__input {
+    float: left;
+    width: 75%;
+    border: 1px solid #ccc;
+    border-right: 0;
+    border-radius: 3px 0 0 3px;
+    padding: 4px 10px;
+    outline: 0;
+}
+.todo__submit {
+    float: left;
+    width: 25%;
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 0 3px 3px 0;
+    background: #4d6a79;
+    color: #fff;
+    outline: 0;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 400;
+}
+.todo__submit i {
+    margin: 0 0 0 5px;
+}
+.todo__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.todo__list li {
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+}
+.todo__list li p {
+    margin: 0 0 0 25px;
+    line-height: 28px;
+}
+.todo__list li span {
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+.todo__list li input[type=checkbox] {
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+.todo__list--complete {
+    text-decoration: line-through;
+}

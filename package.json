@@ -1,0 +1,23 @@
+{
+  "name": "angular2-upgrade-starter",
+  "version": "1.0.0",
+  "description": "Very basic todo starter app that can be used as an example of upgrading to Angular2",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/browser-sync/bin/browser-sync.js start --server '.' --serveStatic './app' './static'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jellekralt/angular2-upgrade-starter.git"
+  },
+  "author": "Jelle Kralt <jelle@jellekralt.nl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jellekralt/angular2-upgrade-starter/issues"
+  },
+  "homepage": "https://github.com/jellekralt/angular2-upgrade-starter#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0"
+  }
+}

@@ -1,0 +1,21 @@
+<div class="todo">
+    <form ng-submit="vm.onSubmit($event);">
+        <h3>Todo List: ({{ vm.updateIncomplete() }} of {{ vm.todos.length }})</h3>
+        <div class="todo__fields">
+            <input ng-model="vm.label" class="todo__input">
+            <button type="submit" class="todo__submit">
+                Add <i class="fa fa-check-circle"></i>
+            </button>
+        </div>
+    </form>
+    <ul class="todo__list">
+        <li ng-repeat="item in vm.todos"
+            ng-class="{ 'todo__list--complete': item.complete }">
+            <input type="checkbox" ng-model="item.complete">
+            <p>{{ item.label }}</p>
+            <span ng-click="vm.deleteItem($index);">
+                <i class="fa fa-times-circle"></i>
+            </span>
+        </li>
+    </ul>
+</div>
