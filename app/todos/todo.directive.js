@@ -25,27 +25,44 @@
 
     /* @ngInject */
     function TodoController() {
-        console.log('asdfasdfasdf');
-        this.label = '';
-        this.todos = [{
-            label: 'Learn Angular',
+        var vm = this;
+
+        vm.label = '';
+
+        vm.todos = [{
+            label: 'Convert this thing to Angular 2!',
             complete: false
         },{
-            label: 'Deploy to S3',
+            label: 'Listen to presentation',
             complete: true
         },{
-            label: 'Rewrite Todo Component',
+            label: 'Eat Pizza',
             complete: true
         }];
-        this.updateIncomplete = function () {
+
+        /**
+         * Gets the number of incomplete tasks
+         * @returns {Number}
+         */
+        vm.getIncomplete = function () {
             return this.todos.filter(function (item) {
                 return !item.complete;
             }).length;
         };
-        this.deleteItem = function (index) {
+
+        /**
+         * Deletes an item
+         * @param index
+         */
+        vm.deleteItem = function (index) {
             this.todos.splice(index, 1);
         };
-        this.onSubmit = function (event) {
+
+        /**
+         * Submit handler
+         * @param event
+         */
+        vm.onSubmit = function (event) {
             if (this.label.length) {
                 this.todos.unshift({
                     label: this.label,

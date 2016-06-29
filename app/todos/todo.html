@@ -1,6 +1,6 @@
 <div class="todo">
     <form ng-submit="vm.onSubmit($event);">
-        <h3>Todo List: ({{ vm.updateIncomplete() }} of {{ vm.todos.length }})</h3>
+        <h3>Todo List: ({{ vm.getIncomplete() }} of {{ vm.todos.length }})</h3>
         <div class="todo__fields">
             <input ng-model="vm.label" class="todo__input">
             <button type="submit" class="todo__submit">
