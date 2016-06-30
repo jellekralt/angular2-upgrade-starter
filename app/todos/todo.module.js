@@ -1,8 +1,8 @@
-(function () {
-    'use strict';
-
-    angular.module('todo', [
-        'todo'
-    ]);
-
-})();
+// (function () {
+//     'use strict';
+//
+//     angular.module('todo', [
+//         'todo'
+//     ]);
+//
+// })();

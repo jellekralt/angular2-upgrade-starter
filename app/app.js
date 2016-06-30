@@ -1,8 +1,16 @@
-(function () {
-    'use strict';
+(function(app) {
 
-    angular.module('app', [
-        'todo'
-    ]);
+    document.addEventListener('DOMContentLoaded', function() {
+        ng.platform.browser.bootstrap(app.TodoComponent);
+    });
 
-})();
+})(window.app || (window.app = {}));
+
+// (function () {
+//     'use strict';
+//
+//     angular.module('app', [
+//         'todo'
+//     ]);
+//
+// })();
