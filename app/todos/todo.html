@@ -1,6 +1,5 @@
 <div class="todo">
     <form (submit)="onSubmit($event);">
-        <input type="text" [value]="'test'">
         <h3>Todo List: ({{ getIncomplete() }} of {{ todos.length }})</h3>
         <div class="todo__fields">
             <input [(ngModel)]="label" class="todo__input">
