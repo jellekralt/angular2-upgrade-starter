@@ -1,5 +1,6 @@
 <div class="todo">
     <form (submit)="onSubmit($event);">
+        <input type="text" [value]="'test'">
         <h3>Todo List: ({{ getIncomplete() }} of {{ todos.length }})</h3>
         <div class="todo__fields">
             <input [(ngModel)]="label" class="todo__input">
@@ -10,9 +11,9 @@
     </form>
     <ul class="todo__list">
         <li *ngFor="#item of todos; #i = index"
-            [ngClass]="{ 'todo__list--complete': item.complete }">
+            [class.todo__list--complete]="item.complete">
             <input type="checkbox" [(ngModel)]="item.complete">
-            <p>{{ item.label }}</p>
+            <p [title]="item.label">{{ item.label }}</p>
             <span (click)="deleteItem(i);">
                 <i class="fa fa-times-circle"></i>
             </span>
