@@ -12,4 +12,6 @@ npm start
 ```
 
 ## Assignment
-Rewrite the app to Angular 2
+* Rewrite the app to Angular 2
+* BONUS: Make the tasks editable
+

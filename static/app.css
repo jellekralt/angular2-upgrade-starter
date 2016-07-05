@@ -9,6 +9,11 @@ h3 {
     text-align: center;
     margin: 0 auto;
 }
+
+i{
+    cursor: pointer;
+}
+
 .todo {
     background: #fff;
     border-radius: 3px;

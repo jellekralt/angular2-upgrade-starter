@@ -28,6 +28,8 @@
         var vm = this;
 
         vm.label = '';
+        vm.title = 'Todo List';
+        vm.titleEditable = false;
 
         vm.todos = [{
             label: 'Convert this thing to Angular 2!',
@@ -48,6 +50,13 @@
             return this.todos.filter(function (item) {
                 return !item.complete;
             }).length;
+        };
+
+        /**
+         * Toggles the editable state of the title
+         */
+        vm.editTitleToggle = function () {
+            vm.titleEditable = !vm.titleEditable;
         };
 
         /**

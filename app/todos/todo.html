@@ -1,6 +1,9 @@
 <div class="todo">
     <form ng-submit="vm.onSubmit($event);">
-        <h3>Todo List: ({{ vm.getIncomplete() }} of {{ vm.todos.length }})</h3>
+        <input ng-blur="vm.editTitleToggle();" ng-if="vm.titleEditable" ng-model="vm.title" />
+        <h3 ng-if="!vm.titleEditable">
+            {{ vm.title }}: ({{ vm.getIncomplete() }} of {{ vm.todos.length }}) <i ng-click="vm.editTitleToggle()" class="fa fa-pencil"></i>
+        </h3>
         <div class="todo__fields">
             <input ng-model="vm.label" class="todo__input">
             <button type="submit" class="todo__submit">
