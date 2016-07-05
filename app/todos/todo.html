@@ -9,7 +9,7 @@
         </div>
     </form>
     <ul class="todo__list">
-        <li *ngFor="#item of todos; #i = index"
+        <li *ngFor="let item of todos; let i = index"
             [class.todo__list--complete]="item.complete">
             <input type="checkbox" [(ngModel)]="item.complete">
             <p [title]="item.label">{{ item.label }}</p>

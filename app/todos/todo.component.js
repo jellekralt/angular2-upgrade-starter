@@ -2,7 +2,8 @@
     'use strict';
 
     app.TodoComponent =
-        ng.core.Component({
+        ng.core
+        .Component({
             selector: 'todo',
             templateUrl: 'todos/todo.html'
         })
