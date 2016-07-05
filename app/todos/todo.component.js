@@ -9,6 +9,8 @@
         })
         .Class({
             constructor: function () {
+                this.title = 'Todo app';
+                this.titleEditable = false;
                 this.label = '';
                 this.todos = [{
                     label: 'Convert this thing to Angular 2!',
@@ -20,6 +22,9 @@
                     label: 'Eat Pizza',
                     complete: true
                 }];
+            },
+            editTitleToggle : function () {
+                this.titleEditable = !this.titleEditable;
             },
             getIncomplete: function() {
                 return this.todos.filter(function (item) {

@@ -1,6 +1,12 @@
 <div class="todo">
     <form (submit)="onSubmit($event);">
-        <h3>Todo List: ({{ getIncomplete() }} of {{ todos.length }})</h3>
+        <h3>
+            <input (blur)="editTitleToggle();" *ngIf="titleEditable" [(ngModel)]="title" />
+            <span *ngIf="!titleEditable">
+                {{ title }}
+                <i (click)="editTitleToggle();" class="fa fa-pencil"></i> : ({{ getIncomplete() }} of {{ todos.length }})
+            </span>
+        </h3>
         <div class="todo__fields">
             <input [(ngModel)]="label" class="todo__input">
             <button type="submit" class="todo__submit">
